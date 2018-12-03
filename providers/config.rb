@@ -1,8 +1,5 @@
 Chef::Provider.send(:include, Limits::Helper)
 
-# needed so notifications work correctly
-use_inline_resources if defined?(use_inline_resources)
-
 def whyrun_supported?
   true
 end

@@ -5,17 +5,19 @@ driver:
 provisioner:
   name: chef_zero
 
+verifier:
+  name: inspec
+
 platforms:
-  - name: ubuntu-10.04
-  - name: ubuntu-12.04
-  - name: ubuntu-14.04
-  - name: debian-6.0.10
-  - name: debian-7.7
-  - name: centos-5.11
-  - name: centos-6.6
-  - name: centos-7.0
-  - name: fedora-19
-  - name: fedora-20
+  - name: ubuntu-16.10
+  - name: ubuntu-17.10
+  - name: ubuntu-18.04
+  - name: debian-8.10
+  - name: debian-9.4
+  - name: centos-6.9
+  - name: centos-7.4
+  - name: fedora-27
+  - name: fedora-28
 
 suites:
   - name: default

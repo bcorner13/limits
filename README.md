@@ -5,11 +5,10 @@ This cookbook is used to configure system limits.conf as well as limits.d config
 
 ## Platforms
 
-* Debian
-* Ubuntu
-* Fedora
-* CentOS
-* Red Hat
+* Debian 9.4, 8.10
+* Ubuntu 16.10, 17.10, 18.04
+* Fedora 27,28
+* CentOS 6.9 7.4
 
 *This should work on most linux platforms, but it has not been explicitly testing unless in the list above.*
 
@@ -171,6 +170,7 @@ License and Author
 ==================
 
 * Author: Jordan Wesolowski (<jrwesolo@gmail.com>)
+* Contributor: Bradley Corner (<bradley.corner@greensky.com>)
 
 ```text
 The MIT License (MIT)

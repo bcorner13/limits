@@ -4,10 +4,12 @@ module Limits
     # http://linux.die.net/man/5/limits.conf
     # Using the 'unless defined?' pattern to avoid
     # warnings about constants already being defined.
-    TYPES = %w(hard soft -) unless defined?(TYPES)
-    ITEMS = %w(core data fsize memlock nofile rss stack
-               cpu nproc as maxlogins maxsyslogins priority
-               locks sigpending msgqueue nice rtprio) unless defined?(ITEMS)
+    TYPES = %w(hard soft -).freeze unless defined?(TYPES)
+    unless defined?(ITEMS)
+      ITEMS = %w(core data fsize memlock nofile rss stack
+                 cpu nproc as maxlogins maxsyslogins priority
+                 locks sigpending msgqueue nice rtprio).freeze
+    end
 
     def validate_limit(domain, type, item = nil, _value = nil)
       domain && !domain.empty? &&

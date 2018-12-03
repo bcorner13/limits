@@ -14,7 +14,7 @@ define :set_limit, use_system: false, # ~FC015
     domain: params[:domain] || params[:name],
     type: params[:type],
     item: params[:item],
-    value: params[:value]
+    value: params[:value],
   }
 
   r = nil
